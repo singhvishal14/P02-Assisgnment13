@@ -1,0 +1,38 @@
+﻿@model IEnumerable<Assisgnment_13.Models.TeamsAndWorldCup>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Teams With Number Of WorldCups</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            Team Id
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NoOfWorldCups)
+        </th>
+
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @item.Id
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NoOfWorldCups)
+            </td>
+        </tr>
+    }
+
+</table>
